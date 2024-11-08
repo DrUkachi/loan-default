@@ -21,15 +21,6 @@ entry_points:
         description: This is the description of the output artifact that will be created and stored
         type: string
 
-      min_price:
-        description: This is the minimum price of the house in our model
-        type: float
-
-      max_price:
-        description: This is the maximum price of the house in our model
-        type: float
-      
-
 
     command: >-
         python run.py --input_artifact {input_artifact} \
