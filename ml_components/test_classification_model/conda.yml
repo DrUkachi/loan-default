@@ -1,10 +1,13 @@
-name: download_file
+name: test_classification_model
 channels:
   - conda-forge
   - defaults
 dependencies:
+  - python
   - pip
   - requests
+  - scikit-learn
+  - pandas
   - pip:
       - mlflow
       - wandb

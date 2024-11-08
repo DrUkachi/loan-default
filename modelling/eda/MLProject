@@ -1,0 +1,9 @@
+name: DataInsightsProject
+
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+      data_path: {type: str, default: "./data/input.csv"}
+    command: "python run.py --input_artifact {input_artifact}"
