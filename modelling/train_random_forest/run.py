@@ -147,11 +147,12 @@ def go(args):
     logger.info("Scoring")
 
     y_pred = sk_pipe.predict(X_val)
+    y_prob = sk_pipe.predict_proba(X_val)[:, 1] # Get probabilities for AUC-ROC
 
-    # Calculate accuracy and F1-score
+    # Calculate accuracy, F1 score and AUC_ROC
     accuracy = accuracy_score(y_val, y_pred)
     f1 = f1_score(y_val, y_pred, average="binary")  # 'weighted' for multiclass, 'binary' for binary
-    y_prob = sk_pipe.predict_proba(X_val)[:, 1] # Get probabilities for AUC-ROC
+    
     auc_roc = roc_auc_score(y_val, y_prob)
 
     logger.info(f"Accuracy Score: {accuracy}")

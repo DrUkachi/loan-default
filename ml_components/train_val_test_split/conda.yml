@@ -1,0 +1,12 @@
+name: download_file
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - pip
+  - requests
+  - scikit-learn
+  - pip:
+      - mlflow
+      - wandb
