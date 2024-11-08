@@ -1,0 +1,6 @@
+name: ml_components
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - mlflow=1.14.1
