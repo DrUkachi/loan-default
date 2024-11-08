@@ -1,8 +1,7 @@
 from setuptools import setup
 
-
 setup(
-    name="wandb-utils",
+    name="wandb_utils",
     version=0.1,
     description="Utilities for interacting with Weights and Biases and mlflow",
     zip_safe=False,  # avoid eggs, which make the handling of package data cumbersome
