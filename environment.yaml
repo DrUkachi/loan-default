@@ -1,0 +1,14 @@
+name: loan_default_dev
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - hydra-core
+  - matplotlib
+  - pandas
+  - jupyterlab
+  - pip
+  - pip:
+      - mlflow
+      - wandb
