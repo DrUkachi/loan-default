@@ -1,0 +1,9 @@
+name: {{cookiecutter.step_name}}
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - pip:
+      - mlflow
+      - wandb

@@ -8,4 +8,4 @@ dependencies:
   - mlflow=1.14.1
   - pip:
       - wandb==0.10.31
-      - git+https://github.com/DrUkachi/loan-default.git#egg=wandb_utils&subdirectory=ml_components
+      - git+https://github.com/DrUkachi/loan-default.git#egg=wandb-utils&subdirectory=ml_components
