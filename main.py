@@ -60,7 +60,7 @@ def go(config: DictConfig):
                             "input_artifact": "sample.csv:latest",
                             "output_artifact": "clean_sample.csv",
                             "output_type": "clean_sample",
-                            "output_description": "Data is now cleaned."
+                            "output_description": "Data is now cleaned and ready for use."
                         },
             )
             
@@ -76,6 +76,18 @@ def go(config: DictConfig):
                 "kl_threshold": config["data_check"]["kl_threshold"],
             },
         )
+        
+        if "feature_engineering" in active_steps:
+
+            _ = mlflow.run(
+                os.path.join(hydra.utils.get_original_cwd(), "modelling", "feature_engineering"),
+                "main",
+                parameters={
+                    "input_artifact": "clean_sample.csv:latest",
+                    "output_artifact": "processed_sample.csv",
+                    "output_description": "Data has now being processed"
+                }
+            )
 
         if "data_split" in active_steps:
             _ = mlflow.run(
@@ -83,7 +95,7 @@ def go(config: DictConfig):
             "main",
             parameters={
 
-                "input": "clean_sample.csv:latest",
+                "input": "processed_sample.csv",
                 "test_size": config["modeling"]["test_size"],
                 "random_seed": config["modeling"]["random_seed"],
                 "stratify_by": config["modeling"]["stratify_by"],

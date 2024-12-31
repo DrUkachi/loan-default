@@ -62,12 +62,24 @@ def test_personal_status(data):
     assert set(known_status) ==  set(status)
 
 
-def test_similar_age_distr(data: pd.DataFrame, ref_data: pd.DataFrame, kl_threshold: float):
+def test_similar_loan_duration_distr(data: pd.DataFrame, ref_data: pd.DataFrame, kl_threshold: float):
     """
     Apply a threshold on the KL divergence to detect if the distribution of the new data is
     significantly different than that of the reference dataset
     """
-    dist1 = data['age'].value_counts().sort_index()
-    dist2 = ref_data['age'].value_counts().sort_index()
+    dist1 = data['months_loan_duration'].value_counts().sort_index()
+    dist2 = ref_data['months_loan_duration'].value_counts().sort_index()
+
+    assert scipy.stats.entropy(dist1, dist2, base=2) < kl_threshold
+
+
+def test_similar_residence_distr(data: pd.DataFrame, ref_data: pd.DataFrame,
+                              kl_threshold: float):
+    """
+    Apply a threshold on the KL divergence to detect if the distribution of the new data is
+    significantly different than that of the reference dataset
+    """
+    dist1 = data['residence_history'].value_counts().sort_index()
+    dist2 = ref_data['residence_history'].value_counts().sort_index()
 
     assert scipy.stats.entropy(dist1, dist2, base=2) < kl_threshold
