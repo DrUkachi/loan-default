@@ -42,7 +42,7 @@ def go(args):
             df.loc[(df[target_col] == target_value) & (df[col].isnull()), col] = modes[target_value]
 
     # Step 2: Create a boolean column for 'has_telephone' and drop the 'telephone' column
-    df['has_telephone'] = df["telephone"].apply(lambda x: 1 if pd.notnull(x) and x.strip() != '' else 0)
+    df['has_telephone'] = df["telephone"].apply(lambda x: 1 if pd.notnull(x) else 0)
     df.drop(columns=["telephone"], inplace=True)
 
     # Step 3: Fill missing values in numerical columns with the mean of each column
