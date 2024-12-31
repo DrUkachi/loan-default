@@ -6,9 +6,11 @@ import scipy.stats
 def test_column_names(data):
 
     expected_colums = [
+        "checking_balance",
         "months_loan_duration",
         "credit_history",
         "purpose",
+        "amount",
         "savings_balance",
         "employment_length",
         "installment_rate",
@@ -22,7 +24,7 @@ def test_column_names(data):
         "existing_credits",
         "default",
         "dependents",
-        "telephone",
+        "has_telephone",
         "foreign_worker",
         "job",
         "gender"

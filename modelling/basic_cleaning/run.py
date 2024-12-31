@@ -51,6 +51,31 @@ def go(args):
 
     # Save cleaned data to a file
     filename = "clean_sample.csv"
+    expected_columns = [
+        "checking_balance",
+        "months_loan_duration",
+        "credit_history",
+        "purpose",
+        "amount",
+        "savings_balance",
+        "employment_length",
+        "installment_rate",
+        "personal_status",
+        "other_debtors",
+        "residence_history",
+        "property",
+        "age",
+        "installment_plan",
+        "housing",
+        "existing_credits",
+        "default",
+        "dependents",
+        "has_telephone",
+        "foreign_worker",
+        "job",
+        "gender"
+    ]
+    df = df[expected_columns]
     df.to_csv(filename, index=False)
 
     # Log the artifact to W&B
