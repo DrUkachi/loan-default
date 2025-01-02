@@ -10,3 +10,4 @@ dependencies:
   - pip:
       - mlflow
       - wandb
+      - git+https://github.com/DrUkachi/loan-default.git#egg=wandb-utils&subdirectory=ml_components

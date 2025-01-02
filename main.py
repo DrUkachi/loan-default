@@ -76,18 +76,6 @@ def go(config: DictConfig):
                 "kl_threshold": config["data_check"]["kl_threshold"],
             },
         )
-        
-        if "feature_engineering" in active_steps:
-
-            _ = mlflow.run(
-                os.path.join(hydra.utils.get_original_cwd(), "modelling", "feature_engineering"),
-                "main",
-                parameters={
-                    "input_artifact": "clean_sample.csv:latest",
-                    "output_artifact": "processed_sample.csv",
-                    "output_description": "Data has now being processed"
-                }
-            )
 
         if "data_split" in active_steps:
             _ = mlflow.run(
@@ -137,7 +125,6 @@ def go(config: DictConfig):
                 "test_dataset": "test_data.csv:latest"
             },
         )
-
 
 
 
