@@ -83,7 +83,7 @@ def go(config: DictConfig):
             "main",
             parameters={
 
-                "input": "processed_sample.csv",
+                "input": "clean_sample.csv:latest",
                 "test_size": config["modeling"]["test_size"],
                 "random_seed": config["modeling"]["random_seed"],
                 "stratify_by": config["modeling"]["stratify_by"],
