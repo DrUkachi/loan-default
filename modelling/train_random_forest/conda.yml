@@ -3,11 +3,13 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - python=3.10
+  - hydra-core
   - matplotlib
   - pandas
-  - mlflow
   - pip
   - scikit-learn
   - pillow
   - pip:
       - wandb==0.16.0
+      - mlflow==1.20.2
