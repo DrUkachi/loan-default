@@ -6,7 +6,7 @@ dependencies:
   - python=3.10.0
   - pip
   - requests
-  - scikit-learn
+  - scikit-learn==1.6.0
   - pandas
   - pip:
       - mlflow
