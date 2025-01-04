@@ -28,7 +28,6 @@ modeling:
     max_depth: 15
     min_samples_split: 4
     min_samples_leaf: 3
-    max_leaf_nodes: None
     # Here -1 means all available cores
     n_jobs: -1
     criterion: log_loss
