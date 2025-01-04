@@ -46,7 +46,7 @@ def go(args):
     auc_roc = roc_auc_score(y_test, y_prob)
 
     logger.info(f"Accuracy Score: {accuracy}")
-    logger.info(f"MAE: {f1}")
+    logger.info(f"F1 Score: {f1}")
     logger.info(f"AUC ROC Score: {auc_roc}")
 
     # Log MAE and r2
