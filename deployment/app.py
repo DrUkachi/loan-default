@@ -21,7 +21,7 @@ def load_model():
         wandb_api = wandb.Api()
 
         # Fetch the artifact
-        artifact = wandb_api.artifact("loan_default/random_forest_export:prod", type="model")
+        artifact = wandb_api.artifact("loan_default/random_forest_export:prod", type="model_export")
         model_dir = artifact.download()  # Downloads the artifact to a local directory
 
         # Load the model (adjust based on your model's format)
