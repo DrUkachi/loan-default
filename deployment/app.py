@@ -30,6 +30,10 @@ def load_model():
         print("Model loaded successfully.")
     except Exception as e:
         raise RuntimeError(f"Error loading model: {e}")
+    
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Loan app API!"}
 
 @app.post("/predict")
 def predict(data: Dict):
