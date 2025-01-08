@@ -1,7 +1,8 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
+from contextlib import asynccontextmanager
 import pandas as pd
 import wandb
-import joblib  # Replace with your model's library (e.g., joblib, pickle)
+import joblib
 from typing import Dict
 
 # Initialize FastAPI
@@ -10,14 +11,14 @@ app = FastAPI()
 # Global model variable
 model = None
 
-@app.on_event("startup")
-def load_model():
+@asynccontextmanager
+async def lifespan(app: FastAPI):
     """
-    Downloads the model from W&B and loads it for inference.
+    Lifespan handler for the FastAPI app. Handles startup and shutdown events.
     """
     global model
     try:
-        # Initialize a W&B API client
+        # Initialize a W&B API client and load the model during startup
         wandb_api = wandb.Api()
 
         # Fetch the artifact
@@ -28,8 +29,14 @@ def load_model():
         model_path = f"{model_dir}/model.pkl"  # Replace with the actual model file name
         model = joblib.load(model_path)
         print("Model loaded successfully.")
+
+        yield  # Continue the app's lifespan
+
     except Exception as e:
         raise RuntimeError(f"Error loading model: {e}")
+
+# Set the lifespan event handler for the app
+app = FastAPI(lifespan=lifespan)
     
 @app.get("/")
 def read_root():
