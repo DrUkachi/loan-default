@@ -1,0 +1,10 @@
+streamlit
+fastapi
+uvicorn
+pandas
+numpy
+joblib
+wandb
+requests
+python-multipart  # For file uploads in FastAPI
+scikit-learn==1.6.0
