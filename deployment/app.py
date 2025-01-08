@@ -94,7 +94,6 @@ async def batch_predict(file: UploadFile = File(...)):
         "installment_plan",
         "housing",
         "existing_credits",
-        "default",
         "dependents",
         "has_telephone",
         "foreign_worker",

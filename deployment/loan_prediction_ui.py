@@ -62,7 +62,6 @@ if input_method == "Manual Input":
     installment_plan = st.selectbox("Installment Plan", ["none", "bank", "store"])
     housing = st.selectbox("Housing", ["own", "rent", "for free"])
     existing_credits = st.number_input("Existing Credits", min_value=0, value=1)
-    default = st.number_input("Default (Target Variable)", min_value=0, max_value=1, value=0)
     dependents = st.number_input("Dependents", min_value=0, value=0)
     has_telephone = st.selectbox("Has Telephone", ["0", "1"])
     foreign_worker = st.selectbox("Foreign Worker", ["yes", "no"])
@@ -89,7 +88,6 @@ if input_method == "Manual Input":
         "installment_plan": installment_plan,
         "housing": housing,
         "existing_credits": existing_credits,
-        "default": default,
         "dependents": dependents,
         "has_telephone": int(has_telephone),
         "foreign_worker": foreign_worker,
