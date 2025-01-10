@@ -17,5 +17,5 @@ EXPOSE 80
 ENV NAME World
 
 # Run both FastAPI and Streamlit when the container launches
-CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port 80 & streamlit run ui.py --server.port 8501"]
+CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port 80 & streamlit run loan_prediction_ui.py --server.port 8501"]
 
