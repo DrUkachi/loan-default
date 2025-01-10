@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 
 # Backend URL
-BACKEND_URL = "http://127.0.0.1:8000/predict"
+BACKEND_URL = "http://127.0.0.1:80/predict"
 
 # Helper function to make predictions via FastAPI
 def get_prediction(data):
