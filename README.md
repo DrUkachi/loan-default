@@ -46,9 +46,23 @@ It uses Weights and Bias and ML Workflow to create the End-to-End workflow
 │   ├── train_random_forest/
 │   │   ├── MLProject
 │   ├── train_xgboost/
-├── deployment/                   # NEW: Deployment directory
-│   ├── app.py                    # FastAPI app code
-│   ├── requirements.txt          # Deployment-specific dependencies
-│   ├── Dockerfile                # (Optional) Dockerfile for containerization
-│   └── config.yaml               # Deployment configuration (e.g., model path)
+├── deployment/                   
+│   ├── app.py                    
+│   ├── requirements.txt          
+│   ├── Dockerfile                
+│   └── config.yaml               
 ├── README.md
+
+To run the Dockerfile, follow these steps:
+
+1. **Build the Docker image**:
+   Open a terminal and navigate to the directory containing your Dockerfile. Run the following command to build the Docker image:
+   ```sh
+   docker build -t loan-default-app .
+   ```
+
+2. **Run the Docker container**:
+   After the image is built, run the container using the following command:
+   ```sh
+   docker run -p 80:80 -p 8501:8501 loan-default-app
+   ```

@@ -7,4 +7,4 @@ joblib
 wandb
 requests
 python-multipart  # For file uploads in FastAPI
-scikit-learn==1.6.0
+scikit-learn==1.6.0 # We need this consistency for training and inference
