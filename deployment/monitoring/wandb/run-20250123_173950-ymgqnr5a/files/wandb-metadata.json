@@ -1,0 +1,42 @@
+{
+  "os": "Windows-11-10.0.22631-SP0",
+  "python": "CPython 3.12.4",
+  "startedAt": "2025-01-23T16:39:50.117198Z",
+  "program": "c:\\Users\\UKASHI\\Documents\\Github\\loan-default\\deployment\\monitoring\\monitor.ipynb",
+  "codePath": "deployment\\monitoring\\monitor.ipynb",
+  "git": {
+    "remote": "https://github.com/DrUkachi/loan-default.git",
+    "commit": "27b09a91e002d4949b98f701318709fe6eaf503f"
+  },
+  "email": "ukachi.osi@gmail.com",
+  "root": "c:\\Users\\UKASHI\\Documents\\Github\\loan-default\\deployment\\monitoring",
+  "host": "UKACHI",
+  "executable": "c:\\Users\\UKASHI\\anaconda3\\envs\\deelproject\\python.exe",
+  "codePathLocal": "monitor.ipynb",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "gpu": "NVIDIA GeForce GTX 1060",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1998992699392",
+      "used": "1330834956288"
+    }
+  },
+  "memory": {
+    "total": "17050198016"
+  },
+  "cpu": {
+    "count": 6,
+    "countLogical": 12
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce GTX 1060",
+      "memoryTotal": "6442450944",
+      "cudaCores": 1280,
+      "architecture": "Pascal"
+    }
+  ],
+  "cudaVersion": "12.0"
+}

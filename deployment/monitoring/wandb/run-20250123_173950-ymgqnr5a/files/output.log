@@ -1,0 +1,71 @@
+2025-01-23 17:41:22,228 Downloading artifacts
+wandb:   1 of 1 files downloaded.
+wandb:   1 of 1 files downloaded.
+wandb:   1 of 1 files downloaded.
+wandb:   1 of 1 files downloaded.
+Renamed 'tmppl75h84k' to 'tmppl75h84k.csv'
+File successfully renamed to: c:\Users\UKASHI\Documents\Github\loan-default\deployment\monitoring\artifacts\trainval_data.csv-v0\tmppl75h84k.csv
+Renamed 'tmppl75h84k.csv' to 'trainval_data.csv'
+File successfully renamed to: c:\Users\UKASHI\Documents\Github\loan-default\deployment\monitoring\artifacts\trainval_data.csv-v0\trainval_data.csv
+wandb:   1 of 1 files downloaded.
+Renamed 'tmp_1t6jg70' to 'test_data.csv'
+File successfully renamed to: c:\Users\UKASHI\Documents\Github\loan-default\deployment\monitoring\artifacts\test_data.csv-v0\test_data.csv
+wandb:   5 of 5 files downloaded.  
+  WARNING: Failed to remove contents in a temporary directory 'C:\Users\UKASHI\anaconda3\envs\deelproject\Lib\site-packages\~yarrow'.
+  You can safely remove it manually.
+2025-01-23 18:21:52,736 Loading model and performing inference on test set
+2025-01-23 18:22:43,602 Loading model and performing inference on test set
+2025-01-23 18:23:47,240 Loading model and performing inference on test set
+2025-01-23 18:24:00,830 Loading model and performing inference on test set
+c:\Users\UKASHI\anaconda3\envs\deelproject\Lib\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator SimpleImputer from version 1.3.2 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+c:\Users\UKASHI\anaconda3\envs\deelproject\Lib\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator OneHotEncoder from version 1.3.2 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+c:\Users\UKASHI\anaconda3\envs\deelproject\Lib\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator Pipeline from version 1.3.2 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+c:\Users\UKASHI\anaconda3\envs\deelproject\Lib\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator ColumnTransformer from version 1.3.2 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+c:\Users\UKASHI\anaconda3\envs\deelproject\Lib\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.3.2 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+c:\Users\UKASHI\anaconda3\envs\deelproject\Lib\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator RandomForestClassifier from version 1.3.2 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2025-01-23 18:24:32,675 Loading model and performing inference on test set
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 800 entries, 0 to 799
+Data columns (total 22 columns):
+ #   Column                Non-Null Count  Dtype
+---  ------                --------------  -----
+ 0   checking_balance      800 non-null    float64
+ 1   months_loan_duration  800 non-null    int64
+ 2   credit_history        800 non-null    object
+ 3   purpose               800 non-null    object
+ 4   amount                800 non-null    int64
+ 5   savings_balance       800 non-null    float64
+ 6   employment_length     800 non-null    object
+ 7   installment_rate      800 non-null    int64
+ 8   personal_status       800 non-null    object
+ 9   other_debtors         800 non-null    object
+ 10  residence_history     800 non-null    object
+ 11  property              800 non-null    object
+ 12  age                   800 non-null    int64
+ 13  installment_plan      800 non-null    object
+ 14  housing               800 non-null    object
+ 15  existing_credits      800 non-null    int64
+ 16  dependents            800 non-null    int64
+ 17  has_telephone         800 non-null    int64
+ 18  foreign_worker        800 non-null    object
+ 19  job                   800 non-null    object
+ 20  gender                800 non-null    object
+ 21  prediction            800 non-null    int64
+dtypes: float64(2), int64(8), object(12)
+memory usage: 137.6+ KB
+Numerical Columns: ['checking_balance', 'months_loan_duration', 'amount', 'savings_balance', 'installment_rate', 'age', 'existing_credits', 'dependents', 'has_telephone', 'prediction']
+Categorical Columns: ['credit_history', 'purpose', 'employment_length', 'personal_status', 'other_debtors', 'residence_history', 'property', 'installment_plan', 'housing', 'foreign_worker', 'job', 'gender']
+'--evidently' is not recognized as an internal or external command,
+operable program or batch file.

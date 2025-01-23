@@ -1,0 +1,8 @@
+{"time":"2025-01-23T17:39:50.1171982+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"c:\\Users\\UKASHI\\Documents\\Github\\loan-default\\deployment\\monitoring\\wandb\\run-20250123_173950-ymgqnr5a\\logs\\debug-core.log"}
+{"time":"2025-01-23T17:39:50.2327848+01:00","level":"INFO","msg":"created new stream","id":"ymgqnr5a"}
+{"time":"2025-01-23T17:39:50.2328482+01:00","level":"INFO","msg":"stream: started","id":"ymgqnr5a"}
+{"time":"2025-01-23T17:39:50.2328482+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"ymgqnr5a"}
+{"time":"2025-01-23T17:39:50.2328482+01:00","level":"INFO","msg":"sender: started","stream_id":"ymgqnr5a"}
+{"time":"2025-01-23T17:39:50.2328482+01:00","level":"INFO","msg":"handler: started","stream_id":"ymgqnr5a"}
+{"time":"2025-01-23T17:39:50.8140403+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-23T17:39:51.3007817+01:00","level":"INFO","msg":"Pausing system monitor"}
