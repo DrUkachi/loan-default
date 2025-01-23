@@ -332,3 +332,7 @@
 {"time":"2025-01-23T18:57:01.9870534+01:00","level":"INFO","msg":"Pausing system monitor"}
 {"time":"2025-01-23T18:57:07.159559+01:00","level":"INFO","msg":"Resuming system monitor"}
 {"time":"2025-01-23T18:57:07.2561043+01:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-01-23T22:10:37.5396645+01:00","level":"WARN","msg":"sender: taking a long time","seconds":10679.3114191,"work":"WorkRecord(*service_go_proto.Request_StopStatus); Control(local:true mailbox_slot:\"hrggo5ov44ng\" connection_id:\"127.0.0.1:61066\")"}
+{"time":"2025-01-23T22:10:37.8620822+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-01-23T22:10:40.2642821+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": write tcp 192.168.0.143:64150->35.186.228.49:443: wsasend: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-01-23T22:10:45.4172666+01:00","level":"INFO","msg":"sender: succeeded after taking longer than expected","seconds":10688.6184615,"work":"WorkRecord(*service_go_proto.Request_StopStatus); Control(local:true mailbox_slot:\"hrggo5ov44ng\" connection_id:\"127.0.0.1:61066\")"}

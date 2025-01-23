@@ -11,7 +11,7 @@ scikit-learn==1.6.0 # We need this consistency for training and inference
 prefect
 tqdm
 pyarrow
-psychopg2-binary
-psychopg2
+psycopg2-binary
+psycopg2
 evidently
 jupyter
