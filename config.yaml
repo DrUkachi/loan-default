@@ -34,3 +34,20 @@ modeling:
     max_features: 0.5
     # DO not change the following
     oob_score: true
+  xgboost:
+    n_estimators: 100
+    max_depth: 6
+    learning_rate: 0.1
+    subsample: 0.8
+    colsample_bytree: 0.8
+    # Here -1 means all available cores
+    n_jobs: -1
+    objective: binary:logistic
+    eval_metric: logloss
+  logistic_regression:
+    C: 1.0
+    penalty: l2
+    solver: liblinear
+    # Here -1 means all available cores
+    n_jobs: -1
+    max_iter: 100

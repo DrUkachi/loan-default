@@ -16,7 +16,9 @@ _steps = [
     # NOTE: We do not include this in the steps so it is not run by mistake.
     # You first need to promote a model export to "prod" before you can run this,
     # then you need to run this step explicitly
-#    "test_regression_model"
+    "test_classification_model",
+    "train_xgboost",
+    "train_logistic_regression"
 ]
 
 
@@ -112,6 +114,44 @@ def go(config: DictConfig):
                 "stratify_by": config["modeling"]["stratify_by"],
                 "rf_config": rf_config,
                 "output_artifact": "random_forest_export",
+                },
+            )
+
+        if "train_xgboost" in active_steps:
+            # Serialize the XGBoost configuration into JSON
+            xgb_config = os.path.abspath("xgb_config.json")
+            with open(xgb_config, "w+") as fp:
+                json.dump(dict(config["modeling"]["xgboost"].items()), fp)
+
+            _ = mlflow.run(
+                os.path.join(hydra.utils.get_original_cwd(), "modelling", "train_xgboost"),
+                "main",
+                parameters={
+                    "trainval_artifact": "trainval_data.csv:latest",
+                    "val_size": config["modeling"]["val_size"],
+                    "random_seed": config["modeling"]["random_seed"],
+                    "stratify_by": config["modeling"]["stratify_by"],
+                    "xgb_config": xgb_config,
+                    "output_artifact": "xgboost_export",
+                },
+            )
+
+        if "train_logistic_regression" in active_steps:
+            # Serialize the Logistic Regression configuration into JSON
+            lr_config = os.path.abspath("lr_config.json")
+            with open(lr_config, "w+") as fp:
+                json.dump(dict(config["modeling"]["logistic_regression"].items()), fp)
+
+            _ = mlflow.run(
+                os.path.join(hydra.utils.get_original_cwd(), "modelling", "train_logistic_regression"),
+                "main",
+                parameters={
+                    "trainval_artifact": "trainval_data.csv:latest",
+                    "val_size": config["modeling"]["val_size"],
+                    "random_seed": config["modeling"]["random_seed"],
+                    "stratify_by": config["modeling"]["stratify_by"],
+                    "lr_config": lr_config,
+                    "output_artifact": "logistic_regression_export",
                 },
             )
 
